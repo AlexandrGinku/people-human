@@ -1,26 +1,17 @@
 package ru.netology
 
 fun main() {
-    var likes = 101
+    var likes = 105801
     val userOption1 = "человеку"
     val userOption2 = "людям"
-    var printUser = " "
-    if (likes === 1 || likes === 21) {
-        printUser = userOption1
-    } else if (likes === 31 || likes === 41) {
-        printUser = userOption1
-    } else if (likes === 51 || likes === 61) {
-        printUser = userOption1
-    } else if (likes === 71 || likes === 81) {
-        printUser = userOption1
-    } else if (likes === 91 || likes === 101) {
-        printUser = userOption1
-    } else if (likes === 201 || likes === 221) {
-        printUser = userOption1
-    } else if (likes === 231 || likes === 241) {
-        printUser = userOption1
+    var people = userOption2
+    var condition1 = likes % 100
+    var condition2 = likes % 10
+    if (condition1 === 11 || likes === 11) {
+        people = userOption2
     } else {
-        printUser = userOption2
+        people = if (condition2 === 1) userOption1 else userOption2
     }
-    println("Понравилось $likes $printUser")
+
+    println("Понравилось $likes $people")
 }
